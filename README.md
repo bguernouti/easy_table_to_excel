@@ -63,4 +63,6 @@ excel_file.build_all()
 `
 # Result
 # Result with `to_xls_table=True`
-![alt result with to_xls_table](https://github.com/bguernouti/easy_table_to_excel/blob/master/to_xls_table.png?raw=true)
+<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/to_xls_table.png" width="350" alt="to_xls_table enabled">
+# Result with out `to_xls_table`
+<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/simple.png" width="350" alt="to_xls_table disabled">
