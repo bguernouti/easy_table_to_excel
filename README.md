@@ -1,4 +1,6 @@
 # Easy Table to xls sheet
+
+# Creating data
 ```
 import random 
 import pandas as pd
@@ -12,6 +14,7 @@ data = {
 }
 df = pd.DataFrame(data=data, index=index)
 ```
+# Preview
 `print(df)`
 ```
 2013  2014  2015  2016
@@ -24,6 +27,8 @@ Earnings           61    64    98     8
 Total debt         31    74    37   100
 Minority rights    36    77    79    98
 ```
+# Use of the library
+*creating a file and adding a sheet*
 ```
 from core.manager import VirtualSheet, VirtualTable, WorkBookManager
 excel_file = WorkBookManager("test.xlsx")
@@ -52,6 +57,6 @@ easy_table = VirtualTable(df, 0, 0,
 v_sheet.add_virtual_table(easy_table)
 `
 
-```
+`
 excel_file.build_all()
-```
+`
