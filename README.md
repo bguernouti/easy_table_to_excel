@@ -10,6 +10,6 @@ data = {
 }
 index = [
     s[random.randint(0, 20): random.randint(21, 51)] for _ in range(0, 8)
-]<br>
+]
 df = pd.DataFrame(data=data, index=index)
 ```
