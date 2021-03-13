@@ -24,3 +24,23 @@ Earnings           61    64    98     8
 Total debt         31    74    37   100
 Minority rights    36    77    79    98
 ```
+```
+from core.manager import VirtualSheet, VirtualTable, WorkBookManager
+excel_file = WorkBookManager("test.xlsx")
+
+table_index_style = excel_file.add_format({"bold": True, "border": 1})
+title_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16, "reading_order": 2})
+shape_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16})
+```
+```
+full_table = VirtualTable(df, 0, 0,
+                          display_index=True,
+                          display_head=True,
+                          title="Financial analysis",
+                          title_style=title_style,
+                          index_style=table_index_style,
+                          shape_style=shape_style,
+                          head_style=shape_style,
+                          to_xls_table=True
+                          )
+```
