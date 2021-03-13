@@ -1,7 +1,7 @@
 # Easy Table to xls sheet
 ```
 import random 
-import 
+import pandas as pd
 s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 data = {
     "2013": [random.randint(1, 100) for _ in range(0, 8)],
