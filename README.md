@@ -32,6 +32,7 @@ table_index_style = excel_file.add_format({"bold": True, "border": 1})
 title_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16, "reading_order": 2})
 shape_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16})
 ```
+
 ```
 full_table = VirtualTable(df, 0, 0,
                           display_index=True,
@@ -43,4 +44,13 @@ full_table = VirtualTable(df, 0, 0,
                           head_style=shape_style,
                           to_xls_table=True
                           )
+```
+
+```
+v_sheet = excel_file.add_worksheet("Campany sheet", worksheet_class=VirtualSheet)
+v_sheet.add_virtual_table(full_table)
+```
+
+```
+excel_file.build_all()
 ```
