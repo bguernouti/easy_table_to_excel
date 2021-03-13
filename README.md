@@ -40,7 +40,7 @@ table_index_style = excel_file.add_format({"bold": True, "border": 1})
 title_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16, "reading_order": 2})
 shape_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16})
 ```
-# Instantiation of the table
+# Table creation
 ```
 easy_table = VirtualTable(df, 0, 0,
                           display_index=True,
