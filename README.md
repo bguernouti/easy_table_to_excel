@@ -1,6 +1,6 @@
 # Easy Table to xls sheet
 
-# Creating data
+# Data creation
 ```
 import random 
 import pandas as pd
@@ -28,18 +28,19 @@ Total debt         31    74    37   100
 Minority rights    36    77    79    98
 ```
 # Use of the library
-*creating a file and adding a sheet*
+
 ```
 from core.manager import VirtualSheet, VirtualTable, WorkBookManager
-excel_file = WorkBookManager("test.xlsx")
-v_sheet = excel_file.add_worksheet("Campany sheet", worksheet_class=VirtualSheet)
+excel_file = WorkBookManager("test.xlsx") # The initialisation of the Workbook 
+v_sheet = excel_file.add_worksheet("Campany sheet", worksheet_class=VirtualSheet) # Added a Worksheet
 ```
+# Styles preparation
 ```
 table_index_style = excel_file.add_format({"bold": True, "border": 1})
 title_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16, "reading_order": 2})
 shape_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16})
 ```
-
+# Instantiation of the table
 ```
 easy_table = VirtualTable(df, 0, 0,
                           display_index=True,
@@ -52,11 +53,13 @@ easy_table = VirtualTable(df, 0, 0,
                           to_xls_table=True
                           )
 ```
-
+# Added to the worksheet
 `
 v_sheet.add_virtual_table(easy_table)
 `
-
+# Build the file
 `
 excel_file.build_all()
 `
+# Result
+
