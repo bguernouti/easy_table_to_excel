@@ -62,4 +62,5 @@ v_sheet.add_virtual_table(easy_table)
 excel_file.build_all()
 `
 # Result
-
+# Result with `to_xls_table=True`
+![alt result with to_xls_table](https://github.com/bguernouti/easy_table_to_excel/blob/master/to_xls_table.png?raw=true)
