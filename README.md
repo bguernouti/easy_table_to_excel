@@ -27,14 +27,16 @@ Minority rights    36    77    79    98
 ```
 from core.manager import VirtualSheet, VirtualTable, WorkBookManager
 excel_file = WorkBookManager("test.xlsx")
-
+v_sheet = excel_file.add_worksheet("Campany sheet", worksheet_class=VirtualSheet)
+```
+```
 table_index_style = excel_file.add_format({"bold": True, "border": 1})
 title_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16, "reading_order": 2})
 shape_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16})
 ```
 
 ```
-full_table = VirtualTable(df, 0, 0,
+easy_table = VirtualTable(df, 0, 0,
                           display_index=True,
                           display_head=True,
                           title="Financial analysis",
@@ -46,10 +48,9 @@ full_table = VirtualTable(df, 0, 0,
                           )
 ```
 
-```
-v_sheet = excel_file.add_worksheet("Campany sheet", worksheet_class=VirtualSheet)
-v_sheet.add_virtual_table(full_table)
-```
+`
+v_sheet.add_virtual_table(easy_table)
+`
 
 ```
 excel_file.build_all()
