@@ -32,7 +32,7 @@ Minority rights    36    77    79    98
 ```
 from core.manager import VirtualSheet, VirtualTable, WorkBookManager
 excel_file = WorkBookManager("test.xlsx") # The initialisation of the Workbook 
-v_sheet = excel_file.add_worksheet("Company sheet", worksheet_class=VirtualSheet) # Added a Worksheet
+v_sheet = excel_file.add_worksheet("Company sheet", worksheet_class=VirtualSheet) # Add a Worksheet to the book
 ```
 # Styles preparation
 ```
@@ -53,7 +53,7 @@ easy_table = VirtualTable(df, 0, 0,
                           to_xls_table=True
                           )
 ```
-# Added to the worksheet
+# Add it to the worksheet
 `
 v_sheet.add_virtual_table(easy_table)
 `
