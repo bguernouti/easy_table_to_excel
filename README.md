@@ -12,8 +12,11 @@ data = {
     "2015": [random.randint(1, 100) for _ in range(0, 8)],
     "2016": [random.randint(1, 100) for _ in range(0, 8)],
 }
-df = pd.DataFrame(data=data, index=index)
 ```
+
+*Using pandas for data validating*
+`df = pd.DataFrame(data=data, index=index)`
+
 # Preview
 `print(df)`
 ```
@@ -35,6 +38,7 @@ excel_file = WorkBookManager("test.xlsx") # The initialisation of the Workbook
 v_sheet = excel_file.add_worksheet("Company sheet", worksheet_class=VirtualSheet) # Add a Worksheet to the book
 ```
 # Styles preparation
+* Style is a <a href="https://xlsxwriter.readthedocs.io/format.html"> xlsxwriter Format object </a>
 ```
 table_index_style = excel_file.add_format({"bold": True, "border": 1})
 title_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16, "reading_order": 2})
