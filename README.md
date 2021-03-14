@@ -62,7 +62,8 @@ v_sheet.add_virtual_table(easy_table)
 excel_file.build_all()
 `
 # Result
-# Result with `to_xls_table=True`
-<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/to_xls_table.png" width="350" alt="to_xls_table enabled">
-# Result with out `to_xls_table`
-<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/simple.png" width="350" alt="to_xls_table disabled">
+*Result with `to_xls_table=True`*
+<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/to_xls_table.png" width="350" alt="to_xls_table enabled" />
+
+*Result with out `to_xls_table`*
+<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/simple.png" width="350" alt="to_xls_table disabled" />
