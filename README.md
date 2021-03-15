@@ -73,4 +73,4 @@ excel_file.build_all()
 <img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/simple.png" width="350" alt="to_xls_table disabled" />
 
 *Idea of complex sheet*<br>
-<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/complex.png" width="350" alt="to_xls_table disabled" />
+<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/complex.png" alt="to_xls_table disabled" />
