@@ -58,9 +58,20 @@ easy_table = VirtualTable(df, 0, 0,
                           )
 ```
 # Add it to the worksheet
-`
-v_sheet.add_virtual_table(easy_table)
-`
+`v_sheet.add_virtual_table(easy_table)`
+
+# Previewing table object
+```
+for k,v in easy_table.coordinates.items():
+    print(k, "=>", v["start"], v["end"])
+```
+``` 
+title => (0, 1) (0, 4)
+head => (1, 1) (1, 4)
+index => (2, 0) (9, 0)
+shape => (2, 1) (9, 4)
+```
+
 # Build the file
 `
 excel_file.build_all()
@@ -75,4 +86,4 @@ excel_file.build_all()
 **Idea of complex sheet**<br>
 <img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/complex.png" alt="to_xls_table disabled" />
 
-Unfortunately this kind of complexity can not be done using **pandas** and **xlsxwriter** only, check `complex.py`.
+Unfortunately this kind of complexity can not be done using **pandas** and **xlsxwriter** only.
