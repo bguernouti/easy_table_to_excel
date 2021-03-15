@@ -75,4 +75,4 @@ excel_file.build_all()
 **Idea of complex sheet**<br>
 <img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/complex.png" alt="to_xls_table disabled" />
 
-Unfortunately this kind of complexity can not be done using **pandas** and **xlsxwriter** only.
+Unfortunately this kind of complexity can not be done using **pandas** and **xlsxwriter** only, check `complex.py`.
