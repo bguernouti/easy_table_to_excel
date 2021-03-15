@@ -23,7 +23,7 @@ data = {
 }
 ```
 
-** Pandas is used for validating the data**<br>
+**Pandas is used for validating the data**<br>
 `df = pd.DataFrame(data=data, index=index)`
 
 # Preview
