@@ -32,6 +32,7 @@ Minority rights    36    77    79    98
 
 ```
 from core.manager import VirtualSheet, VirtualTable, WorkBookManager
+
 excel_file = WorkBookManager("test.xlsx") # The initialisation of the Workbook 
 v_sheet = excel_file.add_worksheet("Company sheet", worksheet_class=VirtualSheet) # Add a Worksheet to the book
 ```
