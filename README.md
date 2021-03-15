@@ -1,3 +1,15 @@
+# Introduction
+This lib came in between **pandas** and **xlsxwriter**, it helps to create complex sheets (separated tables, tables with no digits). 
+In fast summary, the idea is to think that an excel sheet in one way or other will be built with multiple tables that each one can contain:
+- Title for the whole table.
+- Columns (head) for the data.
+- Index.
+- Data.
+
+and each of those elements has its own style ("text-align", "font_size", "reading_direction", etc...).
+
+let take a demonstration of how it works:
+
 # Data creation
 ```
 import random 
@@ -12,7 +24,7 @@ data = {
 }
 ```
 
-**Using pandas for data validating**<br>
+** Pandas is used for validating the data**<br>
 `df = pd.DataFrame(data=data, index=index)`
 
 # Preview
@@ -92,4 +104,7 @@ excel_file.build_all()
 <img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/complex.png" alt="to_xls_table disabled" />
 > check **complex.py**
 
-Unfortunately, this kind of complexity can not be done using **pandas** and **xlsxwriter** only, so feel free to try this lib.
+Unfortunately, this kind of complexity can not be done using **pandas** and **xlsxwriter** only.
+
+# Upcomming features
+1- For sure, charts generation.
