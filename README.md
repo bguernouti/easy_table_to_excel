@@ -14,7 +14,7 @@ data = {
 }
 ```
 
-*Using pandas for data validating*
+**Using pandas for data validating**
 `df = pd.DataFrame(data=data, index=index)`
 
 # Preview
@@ -38,7 +38,7 @@ excel_file = WorkBookManager("test.xlsx") # The initialisation of the Workbook
 v_sheet = excel_file.add_worksheet("Company sheet", worksheet_class=VirtualSheet) # Add a Worksheet to the book
 ```
 # Styles preparation
-* Style is a <a href="https://xlsxwriter.readthedocs.io/format.html"> xlsxwriter Format object </a>
+**Style is a <a href="https://xlsxwriter.readthedocs.io/format.html"> xlsxwriter Format object </a>**
 ```
 table_index_style = excel_file.add_format({"bold": True, "border": 1})
 title_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16, "reading_order": 2})
@@ -66,11 +66,13 @@ v_sheet.add_virtual_table(easy_table)
 excel_file.build_all()
 `
 # Result
-*Result with `to_xls_table=True`* <br>
+**Result with `to_xls_table=True`** <br>
 <img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/to_xls_table.png" width="350" alt="to_xls_table enabled" />
 
-*Result with out `to_xls_table`*<br>
+**Result with out `to_xls_table`**<br>
 <img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/simple.png" width="350" alt="to_xls_table disabled" />
 
-*Idea of complex sheet*<br>
+**Idea of complex sheet**<br>
 <img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/complex.png" alt="to_xls_table disabled" />
+
+Unfortunately this kind of complexity can not be done using **pandas** and **xlsxwriter** only.
