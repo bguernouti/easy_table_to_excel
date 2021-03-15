@@ -1,5 +1,3 @@
-# Easy Table to xls sheet
-
 # Data creation
 ```
 import random 
