@@ -14,7 +14,7 @@ data = {
 }
 ```
 
-**Using pandas for data validating**
+**Using pandas for data validating**<br>
 `df = pd.DataFrame(data=data, index=index)`
 
 # Preview
