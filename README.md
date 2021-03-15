@@ -61,16 +61,22 @@ easy_table = VirtualTable(df, 0, 0,
 `v_sheet.add_virtual_table(easy_table)`
 
 # Previewing table object
+**Coordinates**<br>
 ```
 for k,v in easy_table.coordinates.items():
-    print(k, "=>", v["start"], v["end"])
-```
+    print(k, "=>", v["start"], v["end"])``
 ``` 
+```
 title => (0, 1) (0, 4)
 head => (1, 1) (1, 4)
 index => (2, 0) (9, 0)
 shape => (2, 1) (9, 4)
 ```
+**Cursor**
+
+`print(easy_table.cr)`
+
+`(9, 4)`
 
 # Build the file
 `
