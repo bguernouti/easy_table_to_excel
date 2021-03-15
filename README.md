@@ -64,7 +64,7 @@ easy_table = VirtualTable(df, 0, 0,
 **Coordinates**<br>
 ```
 for k,v in easy_table.coordinates.items():
-    print(k, "=>", v["start"], v["end"])``
+    print(k, "=>", v["start"], v["end"])
 ``` 
 ```
 title => (0, 1) (0, 4)
