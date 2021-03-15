@@ -12,8 +12,11 @@ data = {
     "2015": [random.randint(1, 100) for _ in range(0, 8)],
     "2016": [random.randint(1, 100) for _ in range(0, 8)],
 }
-df = pd.DataFrame(data=data, index=index)
 ```
+
+*Using pandas for data validating*
+`df = pd.DataFrame(data=data, index=index)`
+
 # Preview
 `print(df)`
 ```
@@ -32,9 +35,10 @@ Minority rights    36    77    79    98
 ```
 from core.manager import VirtualSheet, VirtualTable, WorkBookManager
 excel_file = WorkBookManager("test.xlsx") # The initialisation of the Workbook 
-v_sheet = excel_file.add_worksheet("Company sheet", worksheet_class=VirtualSheet) # Added a Worksheet
+v_sheet = excel_file.add_worksheet("Company sheet", worksheet_class=VirtualSheet) # Add a Worksheet to the book
 ```
 # Styles preparation
+* Style is a <a href="https://xlsxwriter.readthedocs.io/format.html"> xlsxwriter Format object </a>
 ```
 table_index_style = excel_file.add_format({"bold": True, "border": 1})
 title_style = excel_file.add_format({"bold": True, "align": "center", "font_size": 16, "reading_order": 2})
@@ -53,7 +57,7 @@ easy_table = VirtualTable(df, 0, 0,
                           to_xls_table=True
                           )
 ```
-# Added to the worksheet
+# Add it to the worksheet
 `
 v_sheet.add_virtual_table(easy_table)
 `
@@ -62,5 +66,11 @@ v_sheet.add_virtual_table(easy_table)
 excel_file.build_all()
 `
 # Result
-# Result with `to_xls_table=True`
-![alt result with to_xls_table](https://github.com/bguernouti/easy_table_to_excel/blob/master/to_xls_table.png?raw=true)
+*Result with `to_xls_table=True`* <br>
+<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/to_xls_table.png" width="350" alt="to_xls_table enabled" />
+
+*Result with out `to_xls_table`*<br>
+<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/simple.png" width="350" alt="to_xls_table disabled" />
+
+*Idea of complex sheet*<br>
+<img src="https://github.com/bguernouti/easy_table_to_excel/blob/master/complex.png" width="350" alt="to_xls_table disabled" />
