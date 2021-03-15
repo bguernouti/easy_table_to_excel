@@ -1,6 +1,6 @@
 # Introduction
 This lib came in between **pandas** and **xlsxwriter**, it helps to create complex sheets (separated tables, tables with no digits). 
-In fast summary, the idea is to think that an excel sheet in one way or other will be built with multiple tables that each one can contain:
+In fast summary, the idea is to think that an excel sheet in one way or another will be built with multiple tables that each one can contain:
 - Title for the whole table.
 - Columns (head) for the data.
 - Index.
