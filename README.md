@@ -105,5 +105,5 @@ excel_file.build_all()
 
 Unfortunately, this kind of complexity can not be done using **pandas** and **xlsxwriter** only.
 
-# Upcomming features
+# Upcoming features
 1- For sure, charts generation.
