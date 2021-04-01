@@ -120,7 +120,7 @@ class VirtualTable:
                 "start": start_title,
                 "end": end_title,
                 "data": self.title,
-                "style": self.title_style if self.index_style else {},
+                "style": self.title_style if self.title_style else {},
                 "merge": True
             }
 
